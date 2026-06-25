@@ -38,3 +38,6 @@ body {
     background-position: center center;
     /* background-blend-mode: screen; */
 }
+/* scroll = image rukti hai, content scroll hota hai
+local  = image bhi scroll hoti hai, content bhi scroll hota hai
+fixed  = image viewport/screen se attach hoti hai */
