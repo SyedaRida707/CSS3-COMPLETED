@@ -135,16 +135,17 @@ In summary, the `padding` property in CSS is a versatile tool for controlling th
 /* *{
     padding: 0;
 } */
- .box{
+.box {
     /* text-align: justify; */
     /* padding: 50px; */
     /* padding top bottom, right left */
     /* padding: 10px 20px; */
- }
- /* Negative padding is not a standard CSS property. Padding is always a positive value to create space around an element's content. Negative margins, on the other hand, can be used to overlap elements. */
+}
+
+/* Negative padding is not a standard CSS property. Padding is always a positive value to create space around an element's content. Negative margins, on the other hand, can be used to overlap elements. */
 
 
- /**  MARGIN IN CSS 
+/**  MARGIN IN CSS 
 /** ---------------------------------------- --> */
 
 /*? The `margin` property defines the space outside the element's border. It creates separation between the element and other elements in the layout. */
@@ -177,13 +178,15 @@ In summary, the `padding` property in CSS is a versatile tool for controlling th
 /*? One Value: margin: value; */
 /* margin: 50px; */
 /* If you provide a single value, it applies to all sides equally. */
-.box{
+.box {
     /* margin: auto;
     margin-bottom: 30px; */
 }
-.box2{
+
+.box2 {
     /* margin-top: 60px; */
 }
+
 /*? Auto Value: You can use margin: auto; to horizontally center an element  not verticle within its container. This is commonly used for centering block-level elements. */
 
 /*? Negative Margins: You can use negative margin values to overlap elements or pull elements closer to each other. However, be cautious with negative margins, as they can lead to unexpected layouts and should be used sparingly. */
@@ -221,7 +224,7 @@ In this case, if you set the width of an element to 100 pixels, and then add 10 
 
 /** ---------------------------------------- --> */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
