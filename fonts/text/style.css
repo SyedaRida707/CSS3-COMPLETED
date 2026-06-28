@@ -1,0 +1,79 @@
+/**  TEXT PROPERTIES IN CSS  
+/** ---------------------------------------- -->
+
+/*?  Text Alignment:- The `text-align` property controls the horizontal alignment of text within an element's box.
+- Common values are `left`, `center`, `right`, and `justify`. */
+
+/*? Text Decoration:- The `text-decoration` property allows you to add decorations like underlines, overlines, or line-through to text. */
+
+/* - text-decoration-line
+    - The text-decoration-line property specifies which type of line should be used as decoration for text, such as underline, overline, line-through, or none.
+- text-decoration-color
+    - The text-decoration-color property sets the color of the text decoration lines, like underlines or overlines.
+
+- text-decoration-style
+    - The text-decoration-style property is used to set the style of the decoration line.
+
+- text-decoration-thickness
+    - Specifies the thickness of the text decoration line
+
+- text-decoration */
+
+/*? textTransform:- The text-transform property allows you to control the capitalization of text. */
+/* Values include uppercase (converts text to all uppercase), lowercase (converts text to all lowercase), and capitalize (capitalizes the first letter of each word). */
+
+/** ------------------------------------- -->
+/**  TEXT SPACING IN CSS  
+/** ---------------------------------------- -->
+
+/*? letter-spacing Property:- The letter-spacing property controls the spacing between characters in a text. */
+/* - It can be set to positive values to increase spacing or negative values to decrease spacing. */
+
+/*? word-spacing Property:- The word-spacing property controls the spacing between words in a text. */
+/* - It can be set to positive values to increase word spacing or negative values to decrease it. */
+
+/*? The line-height property is used to specify the space between lines: */
+
+/*? white-space is used to control how white space within an element is handled. */
+
+/** ------------------------------------- -->
+/**  TEXT PROPERTY OF CSS3
+/** ---------------------------------------- --> */
+
+/*? Text Shadow:- The text-shadow property allows you to add a shadow effect to text characters. */
+/* - It takes three values: horizontal shadow offset, vertical shadow offset, and the shadow color. */
+
+h1 {
+    text-align: center;
+    /*text-decoration: overline;
+    */
+
+    text-decoration-line: overline;
+    text-decoration-color: aqua;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 4px;
+
+    text-transform: capitalize;
+    font-size: 35px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    text-shadow: 0px 0px 12px rgb(0, 183, 255);
+}
+
+p {
+    word-spacing: 1.2px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: justify;
+    /* white-space: nowrap; */
+}
+
+/* pseudo element :: */
+p::first-letter {
+    font-size: 30px;
+    color: aqua;
+}
+
+a {
+    text-decoration: none;
+}

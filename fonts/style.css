@@ -1,0 +1,50 @@
+/**  FONT PROPERTIES IN CSS  
+/** ---------------------------------------- -->
+
+/*? Font Family:- The `font-family` property allows you to specify the font used for text. */
+
+/*? Font Size:- The `font-size` property controls the size of text. */
+/* - You can use various units like pixels (`px`), ems (`em`), percentages (%), or keywords (e.g., `small`, `medium`, `large`) to set the size. */
+
+/*? Font Weight:- The `font-weight` property defines the thickness of text characters, ranging from `100` (thin) to `900` (bold). */
+
+/*? Font Style:- The `font-style` property allows you to apply styles like italic to text. */
+/* - Common values include `normal` (default), `italic`, and `oblique`. */
+
+/*? Font Variant:- The `font-variant` property is used to control the appearance of text characters by modifying their variant forms. */
+/* value: normal, small-caps */
+
+
+/* Three ways we use external fonts 1 import, 2 link in HTML, 3 font-face */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+@font-face {
+    font-family: 'CustomeMera';
+    src: url('./assets/bemdayni/Bemdayni\ Demo.otf') format('OpenType');
+}
+h1{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      font-family: "Merriweather", serif;
+      font-style: oblique;
+      font-variant: small-caps;
+}
+p{
+    font-weight: bold;
+    font-size: 30px;
+    color: gray;
+}
+h3{
+                                /* callfack fonts */
+    font-family: 'CustomeMera','serif';
+    font-size: 70px;
+}
+
+/*? Common font formats and their corresponding format values are: */
+/* TrueType Font (.ttf): format('truetype') or format('opentype')
+Otf font (.Otf) : format('OpenType')
+WOFF Font (.woff): format('woff')
+WOFF2 Font (.woff2): format('woff2')
+Embedded OpenType Font (.eot): format('embedded-opentype')
+SVG Font (.svg): format('svg')  */
+
+
