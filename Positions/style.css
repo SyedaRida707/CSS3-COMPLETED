@@ -1,0 +1,71 @@
+/** ------------------------------------- -->
+/**  POSITION IN CSS  
+/** ---------------------------------------- --> */
+
+/*? The position property in CSS is used to control the positioning of elements within a web page. It defines how an element should be placed relative to its normal position in the document flow or relative to its parent or containing elements. */
+
+/*? position: relative; */
+/*? Definition: Elements with position: relative; are positioned relative to their normal position in the document flow. */
+
+/*TODO New Properties Unlocked  */
+/*? Properties: top, right, bottom, left: Offset the element from its normal position. */
+
+/*? position: absolute; */
+/*? Definition: Elements with position: absolute; are positioned relative to the nearest positioned ancestor or the initial containing block. */
+
+/** ---------------------------------------- --> */
+
+.box {
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(skyblue, blue);
+    position: relative;
+    margin: 0 auto;
+    /* instead we use unlock property TBLR */
+    /* left: 20px; */
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to top, rgb(235, 135, 233), rgb(0, 221, 255));
+    border: 1px solid black;
+    text-align: center;
+}
+
+.items-1 {
+    /* top: 0;
+    left: 0; */
+    position: absolute;
+}
+
+.items-2 {
+    right: 0;
+    position: absolute;
+}
+
+.items-3 {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+/* .items-4 {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+} */
+
+.items-5 {
+    /* right: 200px;
+    top: 200px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Static by-deafult */
+.items-4{
+    /* position: static;
+    top: 40%; */
+}
