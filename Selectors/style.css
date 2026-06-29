@@ -13,3 +13,23 @@
 /*? General Sibling Selector (~): Selects all elements that are siblings of another element and share the same parent. */
 
 /*? Universal Selector (*): Selects all elements. */
+
+/*---------------- Descendant Selector----------------------------*/
+ul p{
+    color: rgb(1, 109, 152);
+}
+ul li {
+    color: pink;
+}
+/*---------------- Child Selector----------------------------*/
+.box > ul > li {
+    color: blueviolet;
+}
+/*---------------- Adjacent Sibling Selector----------------------------*/
+.box ul p + li {
+    color: brown;
+}
+/*---------------- General Sibling Selector----------------------------*/
+.box ul p ~ li {
+    color: rgb(194, 160, 9);
+}
