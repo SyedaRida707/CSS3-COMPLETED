@@ -80,29 +80,66 @@ button:hover {
     box-shadow: 0px 0px 5px purple;
 }
 
-p::first-letter{
+p::first-letter {
     font-size: 30px;
     color: purple;
 }
-p::first-line{
+
+p::first-line {
     text-decoration: underline;
     color: purple;
 }
-p::selection{
-    background-color: rgba(128, 0, 128,0.3);
+
+p::selection {
+    background-color: rgba(128, 0, 128, 0.3);
 }
-input::placeholder{
+
+input::placeholder {
     color: purple;
     text-align: center;
 }
 
-ul{
+ul {
     margin-top: 30px;
     text-align: center;
 }
+
+/*           Pseudo Class          */
+
+
 /* .itemss ul li:first-child{
     color: skyblue;
 }
 .itemss ul li:last-child{
     color: aquamarine;
 } */
+
+ul li:nth-of-type(1) {
+    color: rgb(156, 214, 8);
+}
+
+ul li:first-of-type {
+    color: palevioletred;
+}
+
+ul li:last-of-type {
+    color: palevioletred;
+}
+
+ul li:nth-child(3) {
+    color: red;
+}
+
+ul li:hover {
+    color: blueviolet;
+    text-shadow: 0px 0px 7px black;
+    font-size: 20px;
+}
+
+ul li:nth-child(even) {
+    color: gray;
+}
+
+ul li:nth-child(odd) {
+    color: rgb(206, 24, 24);
+}
