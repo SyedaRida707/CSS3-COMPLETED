@@ -1,0 +1,82 @@
+/**  TRANSITION IN CSS 
+
+/*? transition-property: Specifies which CSS properties should be transitioned.
+Example: Transitioning the color and background-color properties.
+.element {
+  transition-property: color, background-color;
+} */
+
+/*? transition-duration: Defines how long the transition should take to complete.
+Example: Transitioning over 1 second.
+.element {
+  transition-duration: 1s;
+} */
+/* it accept s and ms values too 
+Transition options: */
+
+/*? 3: transition-timing-function: Specifies the timing curve used for the transition.
+Example: Using ease-in-out for a smooth start and end.
+.element {
+  transition-timing-function: ease-in-out;
+} */
+
+/*? 4:transition-delay: Sets a delay before the transition starts.
+Example: Starting the transition after 0.5 seconds. */
+
+/**  NOTES + TIPS 
+
+/** shorthand property of all 4 is simply to write transition */
+/* property name | duration | easing function | delay */
+/*? transition: margin-right 4s ease-in-out 1s; */
+
+/* 
+transition-timing-function: ease;
+transition-timing-function: linear;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: 3px solid rgb(252, 54, 87);
+    color: rgb(252, 54, 87);
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 20px;
+    /*transitions*//*transition-property: padding, background-color, color;
+    *//*transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+    transition-delay: .2s;
+    *//*transition: padding  .2s ease .2s;
+    */
+    transition: all  .2s linear ;
+
+}
+
+button:hover {
+    padding: 10px 40px;
+    box-shadow: 0px 0px 10px rgb(252, 54, 87);
+    background-color: rgb(252, 54, 87);
+    color: white;
+}
+img{
+    transition: all  .2s linear ;
+    width: 200px;
+}
+img:hover{
+    scale: 1.2;
+    box-shadow: 0px 0px 20px rgb(242, 93, 118);
+}
