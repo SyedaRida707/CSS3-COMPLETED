@@ -29,14 +29,13 @@ body {
     /* grid-template-columns: 1fr max-content repeat(1,1fr); */
     /* grid-template-columns: 1fr minmax(250px, 1fr) repeat(1,1fr); */
     /* grid-template-columns: repeat(3, minmax(250px, 1fr)); */
+
+
+    /* auto-fill Creates as many columns as possible,
+    even if some remain empty. auto-fit Creates only the needed columns and expands them by collapsing any empty columns. */
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
-
-
-
-
-    
 
     row-gap: 10px;
     column-gap: 20px;
