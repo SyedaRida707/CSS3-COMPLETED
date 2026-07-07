@@ -1,0 +1,135 @@
+/**  FLEXBOX IN CSS
+/** ---------------------------------------- --> */
+
+/*? Flexbox is a one-dimensional layout model that helps you distribute space along a single axis (either horizontally or vertically) in a flexible and efficient way. It allows you to align and distribute elements within a container, making it easier to create complex layouts without using floats or positioning.  */
+
+/** ----------- Flex Container Properties (Parent) ----------- */
+
+/*? 1:  Flex Container (display: flex;):
+To create a flexbox layout, you need a flex container. Apply display: flex; to the container element.
+.flex-container {
+  display: flex;
+} */
+
+/*? 2: Flex Items:
+Elements inside the flex container are called flex items.
+Flex items can be aligned and distributed along the main axis (horizontal or vertical). */
+
+/*? 3: Main Axis and Cross Axis:
+/** In a flex container,  one axis is considered the main axis, and the other is the cross axis. You can set the main axis to be either horizontal (row) or vertical (column). */
+
+/*? Flex Direction (flex-direction): Use flex-direction to specify the direction to either main axis or cross-axis.
+Values: row, row-reverse, column, column-reverse.
+.flex-container {
+  flex-direction: row; /* Horizontal main axis (default) 
+} */
+
+/*? if the flex-direction:row then horizontal will be main-axis 
+if flex-direction:column the vertical part will be main-axis and horizontal axis become the cross axis  */
+
+/*? Items display in a row (the flex-direction property's default is row). */
+
+/*? 4: Justify Content (justify-content): justify-content aligns flex items along the main axis.
+Values include flex-start, flex-end, center, space-between, and space-around. */
+
+/*? 5: Align Items (align-items):
+align-items aligns flex items along the cross axis.
+Values include flex-start, flex-end, center, stretch, and baseline. */
+
+/*? 6: flex-wrap:
+- Specifies whether flex items should wrap to the next line when they overflow the container.
+/** - Values: nowrap (default), wrap, wrap-reverse. */
+
+/*? 7: align-content:
+- Aligns multiple lines of flex items when there is extra space along the cross axis.
+- Values: flex-start, flex-end, center, space-between, space-around, stretch. */
+
+/** ------------- Flex Item Properties (children) ------------ */
+/*? a. order:
+- Determines the order in which a flex item appears relative to other flex items within the container.
+- Lower values come first. */
+
+/*? b. flex-grow:
+- Specifies how much a flex item should grow to fill available space along the main axis.
+- Default value is 0, meaning it won't grow. */
+
+/*? c. flex-shrink:
+- Specifies how much a flex item should shrink when there isn't enough space along the main axis.
+- Default value is 1, meaning it will shrink. */
+
+/*? d. flex-basis:
+- Defines the initial size of a flex item along the main axis.
+- Default value is auto, which means the item's size is determined by its content. */
+
+/*? e. flex (Shorthand for flex-grow, flex-shrink, and flex-basis):
+- Combines the three flex item properties in one declaration. */
+
+/** ---------- Alignment Properties (Self) ---------------- */
+
+/*? a. align-self:
+- Overrides the align-items property for an individual flex item.
+- Allows you to align a single item differently from others. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.Flex-container {
+    width: 80%;
+    height: auto;
+    border: 1px solid black;
+
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+    /* flex-flow: column wrap; */
+    /* gap: 10px; */
+    /* gap: 10px 20px; */
+    row-gap: 20px;
+    column-gap: 10px;
+    /* align-content: center; */
+
+    & .Flex-items {
+        background-color: blueviolet;
+        width: 100px;
+        height: 100px;
+        /* aspect-ratio: 1; */
+        border: 2px solid rgb(3, 230, 247);
+        /* flex: 1; */
+        /* flex-grow: 1;
+        flex-shrink: 7;
+        flex-basis: 200px; */
+        flex: 1 7 200px;
+
+
+        & p {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 19px;
+            color: white;
+        }
+    }
+}
+
+.one {
+    /* flex-basis: 200px; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 5; */
+    /* order: 3; */
+}
+
+.two {
+    /* align-self: self-end; */
+}
+
+.three {
+    /* order: -1; */
+}
