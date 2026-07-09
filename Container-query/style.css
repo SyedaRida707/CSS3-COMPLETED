@@ -1,0 +1,67 @@
+/* <Container queries enable you to apply styles to an element based on the size of the element's container. -->
+
+< container-type: The container-type CSS property is used to define the type of containment used in a container query. -->
+< container-type: normal;
+container-type: size;  x axis and x axis
+container-type: inline-size; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container,
+.media {
+    max-width: 500px;
+    height: auto;
+    background-color: skyblue;
+    border: 2px solid rgb(0, 76, 94);
+
+    margin-right: 100px;
+    margin-bottom: 20px;
+
+    & div {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        align-items: center;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    & p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        color: rgb(6, 86, 118);
+        text-shadow: 0px 0px 3px rgb(7, 226, 234);
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.container {
+    container-type: inline-size;
+    container-name: changeColumn;
+}
+
+@container changeColumn (width <=400px) {
+    .container div {
+        grid-template-columns: 1fr;
+
+        & p {
+            padding-block: 10px;
+        }
+    }
+}
+
+@media (width <=400px) {
+    .media div {
+        grid-template-columns: 1fr;
+
+        & p {
+            padding-block: 10px;
+        }
+    }
+}
