@@ -5,9 +5,9 @@
 /*? :is() Pseudo-Class (or :matches()):
 The :is() pseudo-class allows you to select elements that match any of the provided selectors.
 It's particularly useful when you want to apply the same styles to multiple selectors without repeating the styles. */
-.container .box h1,
+/* .container .box h1,
 .container .box p,
-.container .box button {}
+.container .box button {} */
 
 /* :is(.container, .box) :is(h1, p, button) {
     font-size: 30px;
@@ -73,4 +73,30 @@ It's commonly used to exclude specific elements from being styled. */
 
 .container :not(.box h1:first-child) {
     color: rgb(78, 2, 75);
+}
+
+* {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.box {
+    scroll-snap-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: aqua;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: yellowgreen;
 }
