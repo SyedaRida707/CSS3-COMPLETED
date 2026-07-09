@@ -1,0 +1,48 @@
+/*  FLOAT IN CSS
+
+ The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    background-color: blueviolet;
+
+    & .container {
+        width: 90vw;
+        height: 20vh;
+        /* background-color: aqua ; */
+        margin: 0 auto;
+
+        & .logo {
+            width: 30vw;
+            /* height: 10vh; */
+            line-height: 10vh;
+            /* background-color: brown; */
+            float: left;
+
+            & h1 {
+                text-align: center;
+            }
+        }
+
+        & nav {
+            width: 60vw;
+            /* height: 10vh; */
+            line-height: 10vh;
+            /* background-color: yellowgreen; */
+            float: right;
+            text-align: right;
+
+            & ul li {
+                display: inline-block;
+                padding: 0px 20px;
+            }
+        }
+    }
+}
