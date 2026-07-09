@@ -72,9 +72,11 @@ button {
         scale: 1.5; */
 
     }
-    & input:focus{
+
+    /* :focus-visible */
+    /* & input:focus{
         outline: 2px solid blue;
-    }
+    } */
     /* & input:focus-visible{
         outline: 2px solid blue;
     } */

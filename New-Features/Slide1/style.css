@@ -1,0 +1,76 @@
+/** LATEST PSEUDO CLASSES
+
+/* !important ->  https://caniuse.com/ */
+
+/*? :is() Pseudo-Class (or :matches()):
+The :is() pseudo-class allows you to select elements that match any of the provided selectors.
+It's particularly useful when you want to apply the same styles to multiple selectors without repeating the styles. */
+.container .box h1,
+.container .box p,
+.container .box button {}
+
+/* :is(.container, .box) :is(h1, p, button) {
+    font-size: 30px;
+    color: yellowgreen;
+} */
+/* :is(.container) .box :is(h1, p, button) {
+    font-size: 30px;
+    color: yellowgreen;
+} */
+/* :is(.container, .box) h1,
+p,
+button {
+    font-size: 30px;
+    color: yellowgreen;
+} */
+
+/*? :where() Pseudo-Class:
+The :where() pseudo-class is similar to :is() and allows you to select elements that match any of the provided selectors. but its specificity is zero
+It's typically used when you want to group selectors without applying specific styles. */
+
+.container .box h1,
+.container .box p,
+.container .box button {
+    color: aqua;
+}
+
+:where(.container, .box) h1,
+p,
+button {
+    font-size: 30px;
+    color: rgb(50, 84, 205);
+}
+
+/*? :has() Pseudo-Class:
+The :has() pseudo-class selects elements that contain a specific element or set of elements that match the provided selector.basically check it has elements or not elements
+It's currently not well-supported in modern browsers and may not be widely used in practice. */
+
+/* Data attribute ==> [type='checkbox'] */
+/* accent-color → Changes the color of checkboxes, radio buttons, progress bars, and range inputs. */
+.container:has([type='checkbox']:checked) label {
+    color: blueviolet;
+}
+
+input[type='checkbox'] {
+    accent-color: blueviolet;
+}
+
+/* .container:has(.box) {
+    background-color: orchid;
+} */
+input {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+/*? :not() Pseudo-Class:
+The :not() pseudo-class allows you to select elements that do not match the provided selector.
+It's commonly used to exclude specific elements from being styled. */
+
+.container :not(button) {
+    background-color: orchid;
+}
+
+.container :not(.box h1:first-child) {
+    color: rgb(78, 2, 75);
+}
