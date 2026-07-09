@@ -75,5 +75,8 @@ img:hover {
 }
 
 .item:hover {
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
+    /* transform: rotateZ(200deg); */
+    transform: translateZ(600px);
+
 }

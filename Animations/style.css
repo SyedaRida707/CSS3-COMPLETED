@@ -51,8 +51,9 @@ This is not a property but a rule used to define the animation's keyframes. Keyf
     animation-timing-function: linear;
     /* animation-delay: 2s; */
     animation-iteration-count: 2;
-    animation-direction: alternate;
+    /* animation-direction: alternate; */
     /* animation-fill-mode: backwards; */
+    animation-play-state: running;
 }
 
 /* @keyframes LeftToRight {
@@ -66,8 +67,8 @@ This is not a property but a rule used to define the animation's keyframes. Keyf
 
     }
 } */
-
-/* @keyframes LeftToRight {
+/* 
+@keyframes LeftToRight {
     0% {
         translate: 0%;
     }
@@ -102,7 +103,7 @@ This is not a property but a rule used to define the animation's keyframes. Keyf
     } */
 /* } */
 
-@keyframes LeftToRight {
+/* @keyframes LeftToRight {
     0% {
         background-color: #ffbb5cb5;
         transform: translate(200px, 0%);
@@ -111,9 +112,9 @@ This is not a property but a rule used to define the animation's keyframes. Keyf
     25% {
         background-color: #fcbf49;
         transform: translate(calc(90vw - 10%));
-    }
+    } */
 
-    50% {
+/* 50% {
         background-color: #000000;
         transform: translate(calc(90vw - 10%), 500px);
     }
@@ -121,10 +122,10 @@ This is not a property but a rule used to define the animation's keyframes. Keyf
     75% {
         background-color: #fcbf49;
         transform: translate(20%, 500px);
-    }
+    } */
 
-    100% {
+/* 100% {
         background-color: #ffbb5cb5;
         transform: translate(20%, 0%);
-    }
-}
+    } */
+/* } */

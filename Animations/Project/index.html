@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario project</title>
+    <style>
+        body {
+            background-image: url(./images.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100vh;
+        }
+
+        img {
+            width: 150px;
+            position: absolute;
+            bottom: 60px;
+            animation: Goo 2s linear 2s infinite;
+        }
+
+        @keyframes Goo {
+            0% {
+                translate: 0vw;
+            }
+
+            100% {
+                translate: calc(100vw - 200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./mario.gif" alt="This is the gif">
+</body>
+
+</html>
