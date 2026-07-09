@@ -1,0 +1,81 @@
+/**  NEW CSS FEATURES CSS
+
+
+/* CSS LOGICAL PROPERTIES INLINE / BLOCK */
+
+/*? The border-inline CSS property is a shorthand property for setting the individual logical block border property values in a single place in the style sheet. */
+
+/* border-inline: 1px solid red  */
+/* This property is a shorthand for the following CSS properties:
+border-inline-color
+border-inline-style
+border-inline-width */
+
+/*? The border-block CSS property is a shorthand property for setting the individual logical block border property values in a single place in the style sheet. */
+/* border-block: 1px solid red  */
+/* This property is a shorthand for the following CSS properties:
+border-block-color
+border-block-style
+border-block-width */
+
+/*? The writing-mode property specifies whether lines of text are laid out horizontally or vertically. */
+/* writing-mode: horizontal-tb|vertical-rl|vertical-lr; */
+
+button {
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-inline: 7px solid blue;
+    border-block: 8px solid purple;
+}
+
+/*? CSS Nesting: The CSS nesting module defines a syntax for nesting selectors, providing the ability to nest one style rule inside another, with the selector of the child rule relative to the selector of the parent rule.  */
+/* div p{
+
+} */
+/* #Main {
+    h1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .box {
+        width: 100px;
+        aspect-ratio: 1;
+        background-color: antiquewhite;
+    }
+} */
+#Main {
+    & h1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        writing-mode: vertical-rl;
+
+        &::before {
+            content: '😉';
+        }
+    }
+
+    & p {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    & .box {
+        width: 100px;
+        aspect-ratio: 1;
+        background-color: antiquewhite;
+
+        /* Individual Transform Properties */
+        /* translate: 100px;
+        rotate: 45deg;
+        scale: 1.5; */
+
+    }
+    & input:focus{
+        outline: 2px solid blue;
+    }
+    /* & input:focus-visible{
+        outline: 2px solid blue;
+    } */
+}

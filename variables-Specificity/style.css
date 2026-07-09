@@ -1,0 +1,78 @@
+/** CSS VARIABLES
+
+/*? CSS variables, also known as CSS custom properties, allow you to define reusable values in your CSS code. They provide more flexibility and maintainability to your styles.  */
+
+/*? 1: Declaration and Syntax: */
+/* Declare a CSS variable with the -- prefix followed by a name. For example: --main-color. */
+/* Assign a value to the variable using the var() function, like this: var(--main-color). */
+/* Variables can store various types of values, such as colors, numbers, text, and more. */
+/** --main-color: #3498db; */
+
+/*? 2: Variable Definition: */
+/*? You can define variables in various places, including at the root level, within a selector, or even inside a specific CSS rule. */
+/** :root { --main-color: #3498db;  } */
+
+/*? 3: Variable Usage: */
+/* Use the var keyword */
+/* .button {
+  ! background-color: var(--main-color);
+} */
+
+
+:root {
+    --main-color: gray;
+    --fS-size: 14px;
+    --bg-color: red;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    color: var(--main-color);
+    background-color: aqua;
+    font-size: var(--fS-size);
+}
+
+/**  CSS SPECIFICITY
+
+/*? CSS specificity is a concept that determines which CSS rules are applied to an HTML element when multiple conflicting rules exist. It helps browsers decide which style declarations should take precedence when more than one rule targets the same element. Specificity is a fundamental part of understanding CSS, and it's crucial for resolving styling conflicts */
+
+/* Every CSS selector has its place in the specificity hierarchy.
+
+? There are Five categories which define the specificity level of a selector:
+
+-!important  - Example  <h1 style="color: red!important;"> 
+Inline styles - Example: <h1 style="color: red;">
+IDs - Example: #navbar
+Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+Elements and pseudo-elements - Example: h1, ::before */
+
+/**  CSS SPECIFICITY - TIPS
+
+/*? Avoid overusing !important since it can lead to difficult-to-maintain code. */
+/*? Use specific selectors when necessary, but strive for a balanced and maintainable approach. */
+
+/* css specificity 0,0,0  ===> ID ,class,element */
+
+/* first Id specificity */
+#main {
+    background-color: greenyellow;
+}
+
+/* Second Class specificity */
+.box {
+    background-color: pink;
+}
+
+/* Third element specificity */
+div {
+    background-color: bisque;
+}
+
+#main {
+    background-color: orangered !important;
+}
