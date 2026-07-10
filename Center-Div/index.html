@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center div 5 ways</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* width: 100vw;
+            height: 100vh; */
+        }
+
+        .box {
+            /* position: relative; */
+            background-color: blanchedalmond;
+            width: 500px;
+            aspect-ratio: 1;
+
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            /* display: grid;
+            place-items: center; */
+
+            /* display: grid;
+            justify-content: center;
+            align-items: center; */
+
+
+            /* display: flex enables margin: auto to center an item both horizontally and vertically. */
+            display: flex;
+        }
+
+        .item {
+            background-color: brown;
+            width: 200px;
+            aspect-ratio: 1;
+
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>
