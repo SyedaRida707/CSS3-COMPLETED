@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Reveal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            color: rgb(0, 179, 255);
+
+
+            &::before {
+                content: 'Syeda Developer...';
+                position: absolute;
+                color: purple;
+                border-right: 2px solid purple;
+                top: 0px;
+                left: 0px;
+                background-color: antiquewhite;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: reveal linear 2s infinite alternate;
+            }
+        }
+
+        @keyframes reveal {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Syeda Developer...</h1>
+</body>
+
+</html>

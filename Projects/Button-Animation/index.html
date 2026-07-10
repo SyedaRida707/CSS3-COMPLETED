@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <title>Shake button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: burlywood;
+            display: grid;
+            place-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-transform: capitalize;
+            background-color: transparent;
+            border: 6px solid brown;
+            color: brown;
+
+            animation: shakeMe 0.2s linear;
+
+            &:hover {
+                border: 6px solid blueviolet;
+                color: blueviolet;
+            }
+        }
+
+
+        @keyframes shakeMe {
+            0% {
+                rotate: 20deg;
+            }
+
+            50% {
+                rotate: -20deg;
+            }
+
+            100% {
+                rotate: 20deg;
+            }
+        }
+
+        h1 {
+            font-family: "Bungee Spice", sans-serif;
+            font-size: 60px;
+            animation: shaketext 2s linear infinite alternate;
+            text-align: center;
+
+        }
+
+        @keyframes shaketext {
+            0% {
+                rotate: 20deg;
+            }
+
+            50% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: -20deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button>Shake me</button> -->
+    <h1>Syeda <br> Rida</h1>
+</body>
+
+</html>
