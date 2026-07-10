@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rough</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            /* display: grid;
+            place-items: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            height: auto;
+            background-color: blueviolet;
+
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            /* align-items: stretch;
+            justify-items: stretch; */
+            grid-auto-rows: 250px;
+            gap: 20px;
+            padding: 10px;
+
+            & div {
+                background-image: linear-gradient(pink, yellow);
+                border: 2px solid rgb(193, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <div>item</div>
+        <!-- <div>item</div> -->
+    </div>
+</body>
+
+</html>
