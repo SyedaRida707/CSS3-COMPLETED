@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+div {
+    width: 50%;
+    height: 60%;
+    /* background-color: aqua; */
+    background-size: 100% 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(46, 37, 37);
+
+    animation: gallery 5s linear infinite;
+}
+
+@keyframes gallery {
+    0% {
+        background-image: url(/assets/img1\ \(1\).jpg);
+    }
+
+    25% {
+        background-image: url(/assets/img1\ \(2\).jpg);
+    }
+
+    50% {
+        background-image: url(/assets/img1\ \(3\).jpg);
+    }
+
+    75% {
+        background-image: url(/assets/img1\ \(4\).jpg);
+    }
+
+    100% {
+        background-image: url(/assets/img1\ \(5\).jpg);
+    }
+}
