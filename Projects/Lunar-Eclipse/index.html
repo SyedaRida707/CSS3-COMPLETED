@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar-Eclipse Like a Real sun Move</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(172, 228, 250);
+    }
+
+    .universe {
+        width: 60vh;
+        aspect-ratio: 1;
+        background-color: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: Bgchange 3s ease-in-out;
+    }
+
+    @keyframes Bgchange {
+        0% {
+            background-color: rgb(255, 191, 0);
+        }
+
+        25% {
+            background-color: orange;
+        }
+
+        50% {
+            background-color: black;
+        }
+
+        75% {
+            background-color: rgb(245, 185, 73);
+        }
+
+        100% {
+            background-color: rgb(249, 154, 110);
+        }
+    }
+
+    .sun {
+        width: 12vw;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: orangered;
+        position: relative;
+        overflow: hidden;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            aspect-ratio: 1;
+            background-color: black;
+            border-radius: inherit;
+            animation: SunMove 3s ease-in-out;
+        }
+
+    }
+
+    @keyframes SunMove {
+        0% {
+            translate: 100%;
+            scale: 1;
+        }
+
+        50% {
+            translate: 0%;
+            scale: 0.9;
+            box-shadow: 0px 0px 18px white;
+        }
+
+        100% {
+            translate: -100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="universe">
+        <div class="sun"></div>
+    </div>
+</body>
+
+</html>
