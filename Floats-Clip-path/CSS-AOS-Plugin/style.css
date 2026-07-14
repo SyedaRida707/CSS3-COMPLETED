@@ -22,8 +22,8 @@ a,
 li {
     font-size: 1.6rem;
     letter-spacing: 0.05rem;
-    font-weight: 400;
-
+    color: var(--white);
+    font-weight: 300;
 }
 
 a {
@@ -41,6 +41,7 @@ h4,
 h5,
 h6 {
     font-family: "Poppins", sans-serif;
+    color: var(--white);
 }
 
 /* Theme Rule = Controls the website's colors, fonts, and variables. */
@@ -75,6 +76,13 @@ h6 {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-cols-four {
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-seven-cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* Module Rule = Reusable components like cards, buttons, navbar, forms. */
 .btn-red {
     background-color: var(--primary);
@@ -84,6 +92,7 @@ h6 {
     font-weight: 500;
     border-radius: .3rem;
 }
+
 .btn-white {
     background-color: transparent;
     display: inline-block;
@@ -96,16 +105,18 @@ h6 {
 }
 
 /* State Rule = Describes how an element looks when its state changes (hover, active, animation). */
-.btn-red:hover{
+.btn-red:hover {
     background-color: transparent;
     border: .1rem solid var(--primary);
     color: var(--primary);
     box-shadow: 0px 0px 10px var(--primary);
 }
-.btn-white:hover{   
+
+.btn-white:hover {
     box-shadow: 0px 0px 10px var(--primary);
 
 }
+
 /***** NAVBAR Section *****/
 .section-header {
     width: 100%;
@@ -161,18 +172,13 @@ nav ul {
 /***** End NAVBAR Section *****/
 
 /***** HERO-SECTION Section *****/
-.hero-section{
-    /* position: relative; */
-    /* background-image: url('/images/Hero-img.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center ; */
-
+.hero-section .container {
     background-image: url('../images/Hero-img.jpg');
     background-repeat: no-repeat;
-    background-position:  center;
+    background-position: center;
     background-size: cover;
 }
+
 .hero-section .container {
     align-items: center;
     gap: 5.5rem;
@@ -199,15 +205,15 @@ nav ul {
 
     & .hero-para {
         max-width: 330px;
-        color: var(--white);
-        font-weight: 300;
         margin: 2rem 0 4rem 0;
     }
 }
-.hero-btnss{
+
+.hero-btnss {
     display: flex;
     gap: 2rem;
 }
+
 /* .hero-img{
      display: flex;
     flex: 1;
@@ -217,33 +223,176 @@ nav ul {
     transform: scaleX(-1);
 } */
 
-/* shape divider */
-.custom-shape-divider-bottom-1783969314 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
+/***** feature Section *****/
 
-.custom-shape-divider-bottom-1783969314 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
+/*****  Cars Section *****/
+.feature-cars .container:nth-child(1) {
+    place-items: center;
+    gap: 2.5rem;
+    padding-bottom: 0;
 
-.custom-shape-divider-bottom-1783969314 .shape-fill {
-    fill: #FFFFFF;
-}
-/***** End HERO-SECTION Section *****/
+    & .cars-section-heading h2 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.04rem;
+        position: relative;
 
-@media (width <= 650px) {
-    .section-header {
-        & .container{
-        flex-direction: column;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1.40rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: .3rem solid var(--primary);
+            width: 6rem;
+            border-radius: 1rem;
+        }
+    }
+
+    & .cars-section-para p {
+        font-size: 1.2rem;
+        text-transform: capitalize;
     }
 }
+
+/***** End Cars Section *****/
+/***** Features carsSection *****/
+.feature-cars .container:nth-child(2) {
+    gap: 4.5rem;
+
+    & .item1 {
+        border-radius: 1rem;
+        box-shadow: 5px 5px 10px var(--primary);
+        transition: all .3s linear;
+
+        & figure {
+            position: relative;
+            display: flex;
+            flex: 1;
+
+            & .feature-img {
+                width: 100%;
+                height: auto;
+                border-top-right-radius: 1rem;
+                border-top-left-radius: 1rem;
+
+            }
+
+            & .like-icon {
+                width: 2rem;
+                background-color: rgba(167, 167, 167, 0.3);
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                padding: 0.3rem;
+                border-radius: .7rem;
+            }
+        }
+
+
+
+        & .feature-content {
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+
+            & h3 {
+                font-weight: 700;
+                font-size: 1.3rem;
+                text-transform: capitalize;
+            }
+
+            & .price {
+                color: var(--primary);
+                font-weight: 700;
+            }
+
+            & .feature-icons {
+                display: flex;
+                justify-content: space-between;
+
+
+                & p {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                }
+
+                & p img {
+                    width: 1.5rem;
+                    height: auto;
+                }
+            }
+        }
+
+        & .feature-btn a {
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+
+        &:hover {
+            scale: 1.04;
+        }
+    }
+}
+
+/***** End Features carsSection *****/
+
+
+/***** Feature Rate Section *****/
+
+.features-cards {
+    gap: 5rem;
+    background-color: var(--border);
+    border-radius: 1rem;
+}
+
+.feature-rates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
+
+    & .feature-rate-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    & .feature-rate-content {
+
+        & h3 {
+            font-size: 3.6rem;
+            font-weight: 600;
+        }
+
+        & p {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+        }
+    }
+
+    &:hover {
+        border: .1rem solid var(--primary);
+    }
+}
+
+/***** End Feature Rate Section *****/
+
+
+/***** End feature Section *****/
+
+
+@media (width <=650px) {
+    .section-header {
+        & .container {
+            flex-direction: column;
+        }
+    }
 }
