@@ -181,6 +181,78 @@ nav ul {
 }
 
 /***** End NAVBAR Section *****/
+/***** ABOUT  Section *****/
+.about-section {
+    margin-top: 6.87rem;
+    position: relative;
+    padding-bottom: 9rem;
+    & .container{
+        gap: 3rem;
+    }
+
+   & .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+        & h2 {
+            font-size: 4.5rem;
+            color: var(--white);
+
+            & span {
+                color: var(--primary);
+            }
+        }
+
+        & h3 {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        & p {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            max-width: 530px;
+        }
+    }
+
+    & .about-img {
+        display: flex;
+        align-items: center;
+        & img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 7px 7px 10px var(--primary);
+    }
+    }
+}
+
+/***** Shape Section *****/ 
+.custom-shape-divider-bottom-1784100720 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1784100720 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1784100720 .shape-fill {
+    fill: #FFFFFF;
+}
+/***** End Shape Section *****/
+
+
+/***** End ABOUT  Section *****/
+
 
 /***** HERO-SECTION Section *****/
 .hero-section .container {
@@ -689,7 +761,6 @@ footer .container:nth-child(2) {
     html {
         font-size: 56.25%;
     }
-
     .grid-cols-four {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -716,7 +787,9 @@ footer .container:nth-child(2) {
             height: auto;
         }
     }
-
+     .about-section .grid-two-cols{
+        grid-template-columns: 1fr;
+     }
     .hero-section .grid-two-cols {
         grid-template-columns: 1fr;
         gap: 0;
@@ -728,11 +801,6 @@ footer .container:nth-child(2) {
         }
     }
 
-    /* .feature-cars .container:nth-child(3) .features-cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    } */
-
     footer .grid-cols-four {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
@@ -743,7 +811,6 @@ footer .container:nth-child(2) {
     html {
         font-size: 43.75%;
     }
-
     nav ul {
         flex-wrap: wrap;
     }
@@ -769,11 +836,6 @@ footer .container:nth-child(2) {
             height: auto;
         }
     }
-
-    /* .feature-cars .container:nth-child(3) .features-cards {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-    } */
     .brands-logos {
         & img {
             width: 50%;
