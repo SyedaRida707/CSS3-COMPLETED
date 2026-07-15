@@ -15,7 +15,11 @@ body {
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
+
 
 p,
 a,
@@ -28,6 +32,7 @@ li {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 li {
@@ -357,22 +362,27 @@ nav ul {
 /***** Feature Rate Section *****/
 
 .features-cards {
-    gap: 5rem;
+    gap: 3rem;
     background-color: var(--border);
     border-radius: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
 }
 
 .feature-rates {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem 1.5rem;
 
-    & .feature-rate-img img {
-        width: 100%;
-        height: auto;
+    & .feature-rate-img {
+        &img {
+            width: 100%;
+            height: auto;
+        }
     }
+
 
     & .feature-rate-content {
 
@@ -482,7 +492,6 @@ footer .container {
 }
 
 footer .footer-cols-1 {
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -574,7 +583,7 @@ footer .footer-cols-3 {
         align-items: center;
 
         & img {
-            width: 6%;
+            width: 8%;
             height: auto;
         }
     }
@@ -631,6 +640,7 @@ footer .footer-cols-4 {
         text-transform: uppercase;
         color: var(--white);
         border: none;
+        cursor: pointer;
 
         &:hover {
             background-color: transparent;
@@ -653,40 +663,121 @@ footer .container:nth-child(2) {
 
 /***** End FOOTER Section *****/
 
-/***** ScrollBar Editing Section *****/ 
-::-webkit-scrollbar{
+/***** ScrollBar Editing Section *****/
+::-webkit-scrollbar {
     width: 1rem;
 }
-::-webkit-scrollbar-track{
-    background-color: aqua;
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg);
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 5rem;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-hover);
 }
+
 /***** End ScrollBar Editing Section *****/
 
 
 /***** MEDIA QUERY Section *****/
-@media (width <= 940px){
-.grid-cols-four{
-        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    }
-}
-@media (width <=700px) {
-    html{
+@media (width <=940px) {
+    html {
         font-size: 56.25%;
     }
-   .hero-section .grid-two-cols{
+
+    .grid-cols-four {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .grid-seven-cols {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .grid-cols-five {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (width <=700px) {
+    html {
+        font-size: 50%;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .hero-section .grid-two-cols {
         grid-template-columns: 1fr;
         gap: 0;
     }
+
     .section-header {
         & .container {
             flex-direction: column;
+        }
+    }
+
+    /* .feature-cars .container:nth-child(3) .features-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    } */
+
+    footer .grid-cols-four {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    }
+}
+
+@media (width <=470px) {
+    html {
+        font-size: 43.75%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .hero-section .hero-heading {
+        font-size: 3.5rem;
+    }
+
+    .hero-btnss {
+        flex-direction: column;
+    }
+
+    .feature-rates {
+        justify-content: flex-start;
+    }
+
+    .feature-rate-img {
+        display: flex;
+        justify-content: center;
+
+        & img {
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    /* .feature-cars .container:nth-child(3) .features-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    } */
+    .brands-logos {
+        & img {
+            width: 50%;
+            height: auto;
         }
     }
 }

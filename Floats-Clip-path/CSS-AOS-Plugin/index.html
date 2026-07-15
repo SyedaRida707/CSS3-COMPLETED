@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>AOS-Plugin + Car-web</title>
 </head>
 
 <body>
     <!-- ========== Start NAVBAR Section ========== -->
-    <header class="section-header">
+    <header class="section-header" data-aos="fade-down" data-aos-delay="100">
         <div class="container">
             <div class="logo">
 
@@ -18,12 +19,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">cars</a></li>
-                    <li><a href="#">brands</a></li>
-                    <li><a href="#">gallery</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#hero-section">home</a></li>
+                    <li><a href="#feature-cars">cars</a></li>
+                    <li><a href="#brands">brands</a></li>
+                    <li><a href="#galler-section">gallery</a></li>
+                    <li><a href="/about.html">about us</a></li>
+                    <li><a href="#footer-cols-3">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,9 +32,9 @@
     <!-- ========== End NAVBAR Section ========== -->
 
     <!-- ========== Start HERO Section ========== -->
-    <main class="hero-section">
+    <main class="hero-section" id="hero-section" data-aos="zoom-in-down" data-aos-delay="200">
         <div class="container grid grid-two-cols">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-right" data-aos-delay="200">
                 <p class="subheading">DRIVE YOUR DREAM</p>
                 <h1 class="hero-heading">DISCOVER <br><span>PERFORMANCE</span></h1>
                 <p class="hero-para">Explore the world's most powerful and luxurious cars.Built for speed, designed for
@@ -44,9 +45,6 @@
                 </div>
             </div>
             <div class="hero-img">
-                <!-- <figure>
-                    <img src="/images/Hero-img.jpg" alt="" width="100%" height="auto">
-                </figure> -->
             </div>
         </div>
     </main>
@@ -55,7 +53,7 @@
 
     <!-- ========== Start FEATURE Section ========== -->
 
-    <div class="feature-cars">
+    <div class="feature-cars" id="feature-cars">
         <!-- ========== Start cars Section ========== -->
         <div class="container grid">
             <div class="cars-section-heading">
@@ -70,7 +68,7 @@
         <!-- ========== Start FEATURE-cars Section ========== -->
 
         <div class="container grid grid-cols-four">
-            <div class="item1">
+            <div class="item1" data-aos="flip-left" data-aos-delay="100">
                 <figure>
                     <img src="/images/futuristic-sports.jpg" alt="Ferrari 488 red" class="feature-img">
                     <img src="/icons/icons8-heart-50.png" alt="like me" class="like-icon">
@@ -86,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="item1">
+            <div class="item1" data-aos="flip-left" data-aos-delay="200">
                 <figure>
                     <img src="/images/night-drive-supercar.jpg" alt="Ferrari 488 red" class="feature-img">
                     <img src="/icons/icons8-heart-50.png" alt="like me" class="like-icon">
@@ -102,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="item1">
+            <div class="item1" data-aos="flip-left" data-aos-delay="300">
                 <figure>
                     <img src="/images/28532.jpg" alt="Ferrari 488 red" class="feature-img">
                     <img src="/icons/icons8-heart-50.png" alt="like me" class="like-icon">
@@ -118,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="item1">
+            <div class="item1" data-aos="flip-left" data-aos-delay="400">
                 <figure>
                     <img src="/images/silver-sport-car-with-driver-highway.jpg" alt="Ferrari 488 red"
                         class="feature-img">
@@ -144,7 +142,7 @@
             <div class="features-cards grid-cols-four grid">
                 <div class="feature-rates">
                     <div class="feature-rate-img">
-                        <img src="/icons/icons8-car-100.png" alt="">
+                        <img src="/icons/icons8-tesla-model-s-96.png" alt="">
                     </div>
                     <div class="feature-rate-content">
                         <h3>250+</h3>
@@ -154,7 +152,7 @@
 
                 <div class="feature-rates">
                     <div class="feature-rate-img">
-                        <img src="/icons/icons8-happy-48.png" alt="">
+                        <img src="/icons/icons8-happy-96.png" alt="">
                     </div>
                     <div class="feature-rate-content">
                         <h3>15+</h3>
@@ -164,7 +162,7 @@
 
                 <div class="feature-rates">
                     <div class="feature-rate-img">
-                        <img src="/icons/icons8-trophy-64.png" alt="">
+                        <img src="/icons/icons8-trophy-96.png" alt="">
                     </div>
                     <div class="feature-rate-content">
                         <h3>250+</h3>
@@ -174,7 +172,7 @@
 
                 <div class="feature-rates">
                     <div class="feature-rate-img">
-                        <img src="/icons/icons8-headset-50.png" alt="">
+                        <img src="/icons/icons8-headset-96.png" alt="">
                     </div>
                     <div class="feature-rate-content">
                         <h3>250+</h3>
@@ -188,44 +186,44 @@
     <!-- ========== End FEATURE Section ========== -->
 
     <!-- ========== Start Brands LOGO Section ========== -->
-    <div class="brands">
+    <div class="brands" id="brands">
         <div class="container grid">
             <div class="cars-section-heading">
                 <h2>Top brands</h2>
             </div>
         </div>
         <div class="container grid grid-seven-cols">
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-bmw-144.png" alt="">
                 <p>BMW</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-mercedes-benz-144.png" alt="">
                 <p>Mercedes-Benz</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-audi-144.png" alt="">
                 <p>Audi</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="logo/icons8-lamborghini-144.png" alt="">
                 <p>Lamborghini</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-ferrari-144.png" alt="">
                 <p>Ferrari</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-porsche-144.png" alt="">
                 <p>Porsche</p>
             </div>
 
-            <div class="brands-logos">
+            <div class="brands-logos" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="/logo/icons8-toyota-144.png" alt="">
                 <p>Toyota</p>
             </div>
@@ -234,21 +232,21 @@
     <!-- ========== End Brands LOGO Section ========== -->
 
     <!-- ========== Start GALLERY Section ========== -->
-    <div class="galler-section">
+    <div class="galler-section" id="galler-section">
         <div class="container grid grid-cols-five">
-            <div class="gallery-img">
+            <div class="gallery-img" data-aos="flip-up" data-aos-delay="100">
                 <img src="/images/silver-sport-car-with-driver-highway.jpg" alt="">
             </div>
-            <div class="gallery-img">
+            <div class="gallery-img" data-aos="flip-up" data-aos-delay="200">
                 <img src="/images/night-drive-supercar.jpg" alt="">
             </div>
-            <div class="gallery-img">
+            <div class="gallery-img" data-aos="flip-up" data-aos-delay="300">
                 <img src="/images/Hero-img.jpg" alt="">
             </div>
-            <div class="gallery-img">
+            <div class="gallery-img" data-aos="flip-up" data-aos-delay="400">
                 <img src="/images/futuristic-sports.jpg" alt="">
             </div>
-            <div class="gallery-img">
+            <div class="gallery-img" data-aos="flip-up" data-aos-delay="500">
                 <img src="/images/28532.jpg" alt="">
             </div>
         </div>
@@ -285,7 +283,7 @@
                 </ul>
             </div>
 
-            <div class="footer-cols-3">
+            <div class="footer-cols-3" id="footer-cols-3">
                 <h3>Quick Links</h3>
                 <p><img src="./icons/icons8-phone-50.png" alt="icon"> <span>+1 234 567 8900</span></p>
                 <p><img src="./icons/icons8-email-50.png" alt="icon"> <span><a
@@ -309,7 +307,10 @@
     <!-- ========== End FOOTER Section ========== -->
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
