@@ -185,15 +185,19 @@ nav ul {
 .about-section {
     margin-top: 6.87rem;
     position: relative;
-    padding-bottom: 9rem;
-    & .container{
+    background-image: linear-gradient(to top, rgba(230, 57, 70, 0.5), rgb(0, 0, 0));
+
+    & .about {
         gap: 3rem;
+        padding-bottom: 10rem;
+
     }
 
-   & .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    & .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         & h2 {
             font-size: 4.5rem;
             color: var(--white);
@@ -218,16 +222,17 @@ nav ul {
     & .about-img {
         display: flex;
         align-items: center;
+
         & img {
-        width: 100%;
-        height: auto;
-        border-radius: 1rem;
-        box-shadow: 7px 7px 10px var(--primary);
-    }
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 7px 7px 10px var(--primary);
+        }
     }
 }
 
-/***** Shape Section *****/ 
+/***** Shape Section *****/
 .custom-shape-divider-bottom-1784100720 {
     position: absolute;
     bottom: 0;
@@ -246,12 +251,88 @@ nav ul {
 }
 
 .custom-shape-divider-bottom-1784100720 .shape-fill {
-    fill: #FFFFFF;
+    fill: var(--bg);
 }
+
 /***** End Shape Section *****/
 
 
 /***** End ABOUT  Section *****/
+
+/***** FORM Section *****/
+.form-create {
+    & .grid {
+        gap: 5rem;
+    }
+}
+
+.form-content {
+    & .grid-two-cols {
+        gap: 5rem;
+    }
+
+    & label {
+        display: block;
+        color: var(--primary);
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        padding-bottom: .2rem;
+        font-weight: 500;
+    }
+
+    & input,
+    textarea {
+        width: 100%;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        padding: 1.5rem 2rem;
+        margin-bottom: 2rem;
+        border-radius: .4rem;
+        border: none;
+        border: .1rem solid var(--primary);
+        box-shadow: 0px 0px 10px var(--primary);
+        background-color: transparent;
+        color: var(--white);
+
+
+        &:focus-visible {
+            outline: .2rem solid var(--primary);
+        }
+        &::placeholder{
+            color: var(--text-light);
+        }
+    }
+
+    & button {
+        padding: 1rem 3rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--white);
+        background-color: var(--primary);
+        border-radius: .3rem;
+        border: none;
+        text-transform: capitalize;
+        transition: all .3s linear;
+
+        &:hover {
+            background-color: transparent;
+            color: var(--primary);
+            border: .1rem solid var(--primary);
+            box-shadow: 0px 0px 10px var(--primary);
+        }
+    }
+}
+
+.map {
+    display: flex;
+
+    & iframe {
+        flex: 1;
+    }
+}
+
+/***** End FORM Section *****/
+
 
 
 /***** HERO-SECTION Section *****/
@@ -297,15 +378,6 @@ nav ul {
     display: flex;
     gap: 2rem;
 }
-
-/* .hero-img{
-     display: flex;
-    flex: 1;
-}
-.hero-img  img{
-    background-color: #FF4D4D;
-    transform: scaleX(-1);
-} */
 
 /***** feature Section *****/
 
@@ -761,6 +833,7 @@ footer .container:nth-child(2) {
     html {
         font-size: 56.25%;
     }
+
     .grid-cols-four {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -787,9 +860,28 @@ footer .container:nth-child(2) {
             height: auto;
         }
     }
-     .about-section .grid-two-cols{
+
+    .about-section .grid-two-cols {
         grid-template-columns: 1fr;
-     }
+    }
+
+    .form-create .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-content .grid {
+        gap: 0;
+    }
+
+    .form-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-shape-divider-bottom-1784100720 svg {
+        height: 80px;
+    }
+
     .hero-section .grid-two-cols {
         grid-template-columns: 1fr;
         gap: 0;
@@ -811,6 +903,7 @@ footer .container:nth-child(2) {
     html {
         font-size: 43.75%;
     }
+
     nav ul {
         flex-wrap: wrap;
     }
@@ -836,6 +929,7 @@ footer .container:nth-child(2) {
             height: auto;
         }
     }
+
     .brands-logos {
         & img {
             width: 50%;
